@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const Card = ({
   link,
@@ -30,7 +29,5 @@ const Card = ({
     </div>
   );
 };
-
-Card.propTypes = { title: PropTypes.string, description: PropTypes.string };
 
 export default Card;
