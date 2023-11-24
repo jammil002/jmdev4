@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Side-wide CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2d3047;
+  color: white;
+}
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/public/fonts/press-start-2p_5.0.9/webfonts/press-start-2p-latin-400-normal.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+section {
+  position: relative;
+  font-size: 20px;
+  padding: 80px 15vw;
+  margin-bottom: -1px;
+}
+/* Side-wide CSS */
+
+/* SVG Wave */
+.wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(173% + 1.3px);
+  height: 174px;
+}
+
+.wave .shape-fill {
+  fill: #2d3047;
+}
+
+.custom-shape-divider-top-1644025950 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1644025950 svg {
+  position: relative;
+  display: block;
+  width: calc(173% + 1.3px);
+  height: 174px;
+}
+
+.custom-shape-divider-top-1644025950 .shape-fill {
+  fill: #048a81;
+}
+/* SVG Wave */
+
+/* Phone Response */
+@media screen and (max-width: 568px) {
+  .nav_links {
+    display: none;
+  }
+
+  .navlogo {
+    display: none;
+  }
+}
+/* Phone Response */
