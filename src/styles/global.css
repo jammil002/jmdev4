@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Temp Font Fix */
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/fonts/press-start-2p_5.0.9/webfonts/press-start-2p-latin-400-normal.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navtitle {
+  font-family: "Press Start 2P";
+}
+/* Temp Font Fix */
+
 /* Side-wide CSS */
 html {
   scroll-behavior: smooth;
@@ -10,15 +25,6 @@ html {
 body {
   background-color: #2d3047;
   color: white;
-}
-
-@font-face {
-  font-family: "Press Start 2P";
-  src: url("/public/fonts/press-start-2p_5.0.9/webfonts/press-start-2p-latin-400-normal.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 section {

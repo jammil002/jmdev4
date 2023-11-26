@@ -1,17 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import type { ReactNode } from "react";
+import Card from "./Card";
 import {
   DiCss3,
   DiHtml5,
   DiJavascript1,
   DiPython,
+  DiJava,
   DiReact,
   DiGit,
   DiGithubBadge,
-  DiJava,
 } from "react-icons/di";
-import Card from "./Card";
 
 type TooltipProps = {
   children: ReactNode;
@@ -22,12 +22,10 @@ const Tooltip: React.FC<TooltipProps> = ({ children, text }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   function handleHoveredEnter() {
-    console.log("Entered icon");
     setIsHovered(true);
   }
 
   function handleHoveredLeave() {
-    console.log("Left icon");
     setIsHovered(false);
   }
 
@@ -87,11 +85,16 @@ const KnownLanguages = () => {
         </a>
       </div>
       <h4 className="font-BebasNeue">Projects</h4>
-      <div className="flex justify-end">
+      <div className="flex justify-end space-x-2">
         <Card
           link="https://jammil002.github.io/whattodoinphx/"
           title="What To Do In Phoenix"
           description="A collection of my favorite places across the valley."
+        />
+        <Card
+          link="https://jammil002.github.io/useMovies/"
+          title="useMovies"
+          description="View, Select, and Rate your own favorite movies."
         />
       </div>
     </div>
