@@ -55,7 +55,7 @@ import "../styles/global.css";
 		  <a id="sectionOneLink"></a>
   
 		  <section class="bg-[#414b5f]">
-			<div class="pt-20 text-center">
+			<div class="pt-20 text-center animate-fadeInTop opacity-0">
 			  <h1 class="font-BebasNeue font-light text-4xl pb-2 pt-5">About Me</h1>
 			  <div class="font-Oswald text-lg leading-2">
 				<p>				
@@ -103,14 +103,18 @@ import "../styles/global.css";
 		  <a id="sectionTwoLink"></a>
   
 		  <section class="bg-[#a799b7]">
-			<div class="text-left">
+			<div id="experience-section" class="text-left">
 			  <h1 class="font-BebasNeue text-4xl pb-4">
 				Experience
 			  </h1>
 			  <div class="flex flex-wrap">
 				<HireCard
 				  title="Sandhills Global - Intern Software Engineer"
+<<<<<<< HEAD
 				  description={["Improved service efficiency by 20% by revamping server-side code, developing and maintaining code to integrate software components into a fully functional software system.", "Developed and integrated SOAP and REST APIs, contributing to the expansion and interoperability of company's software ecosystem", "Increased customer retention by 10% by collaboratively co-designing a customer portal to enhance the user experience according to development best practices, ensuring alignment between business strategies and technical solutions.", "Generated reports for business teams, leveraging data extraction and presentation techniques that improved decision-making processes and reduced time spent in meetings by 15%.", "Applied agile software development methodologies to ensure the timely delivery of products, coordinating with network administrators, systems analysts, and software engineers to resolve any defects in products or company systems.", "Utilized a diverse set of technologies, including C#, VB, SQL, .NET Framework, and Excel for data visualization, demonstrating a versatile skill set in delivering comprehensive and impactful solutions."]}
+=======
+				  description={["Improved service efficiency by 20% through server-side code redesign.", "Developed and integrated both SOAP and REST APIs.", "Co-designed a customer portal, increasing customer retention by 10%.", "Created reports for business teams by pulling and presenting data, improving decision-making and reducing time spent in meetings by 15%.", "Used agile software development to deliver products on time.", "Technologies Used: C#, VB, SQL, .NET Framework, Excel for data visualization"]}
+>>>>>>> e3cf642 (css update)
 				  date='(April 2022 - January 2024)'
 				/>
 			  	<HireCard
@@ -129,7 +133,7 @@ import "../styles/global.css";
 		  </section>
 		  <a id="sectionThreeLink"></a>
 		  <section class="bg-[#048a81]">
-			<div class="text-right">
+			<div id="skills-section" class="text-right">
 			  <h1 class="font-BebasNeue text-4xl pb-2">Skills</h1>
 			  <KnownLanguages client:load />
 			</div>
@@ -189,4 +193,39 @@ import "../styles/global.css";
 	</main>
 </Layout>
 
+<script>
+document.addEventListener('DOMContentLoaded', (): void => {
+    const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[], observer: IntersectionObserver): void => {
+        entries.forEach((entry: IntersectionObserverEntry): void => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing to ensure animation only plays once
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when at least 10% of the target is visible
 
+    const section: HTMLElement | null = document.getElementById('experience-section');
+    if (section) {
+        observer.observe(section);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', (): void => {
+    const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[], observer: IntersectionObserver): void => {
+        entries.forEach((entry: IntersectionObserverEntry): void => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing to ensure the animation only plays once
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when at least 10% of the target is visible
+
+    const sections: NodeListOf<HTMLElement> = document.querySelectorAll('#experience-section, #skills-section');
+    sections.forEach((section: HTMLElement): void => {
+        observer.observe(section);
+    });
+});
+
+
+  </script>
+  

@@ -1,10 +1,10 @@
 import React from "react";
 
-interface HireCardProps {
+type HireCardProps = {
   title: string;
   description: string[];
   date: string;
-}
+};
 
 const HireCard: React.FC<HireCardProps> = ({ title, description, date }) => {
   return (

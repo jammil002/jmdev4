@@ -84,7 +84,7 @@ const KnownLanguages = () => {
         <Card
           link="https://jammil002.github.io/useMovies/"
           title="useMovies"
-          description="View, Select, and Rate your own favorite movies."
+          description="View, select, and rate your own favorite movies."
         />
       </div>
     </div>
