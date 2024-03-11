@@ -50,6 +50,9 @@ const KnownLanguages = () => {
         <Tooltip text="Python">
           <i className="devicon-python-plain shadow-lg text-3xl"></i>
         </Tooltip>
+        <Tooltip text="C#">
+          <i className="devicon-csharp-plain shadow-lg text-3xl"></i>
+        </Tooltip>
         <Tooltip text="Java">
           <i className="devicon-java-plain shadow-lg text-3xl"></i>
         </Tooltip>
@@ -66,6 +69,9 @@ const KnownLanguages = () => {
         </Tooltip>
         <Tooltip text="Github">
           <i className="devicon-github-plain shadow-lg text-3xl"></i>
+        </Tooltip>
+        <Tooltip text=".NET">
+          <i className="devicon-dotnetcore-plain shadow-lg text-3xl"></i>
         </Tooltip>
       </div>
       <h4 className="font-BebasNeue">Certificates</h4>
